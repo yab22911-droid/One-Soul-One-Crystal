@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Results & Order | One Bracelet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css?v=20260529e" />
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+    <script src="./app.js?v=20260529e" defer></script>
+  </head>
+  <body data-page="results">
+    <header class="site-header">
+      <a class="brand" href="./index.html" aria-label="One Bracelet home">
+        <span class="brand-gem" aria-hidden="true"></span>
+        <span>One Bracelet</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary">
+        <a href="./index.html">Home</a>
+        <a href="./customize.html">Customize</a>
+        <a href="./customize.html?mode=wrist">Wrist Try-on</a>
+        <a class="is-active" href="./results.html">Results & Order</a>
+      </nav>
+      <a class="cart-pill" href="./results.html" aria-label="Open results and order page">
+        <i data-lucide="shopping-bag"></i>
+        <span id="cartCount">0</span>
+      </a>
+    </header>
+
+    <main>
+      <section class="subpage-hero results-hero">
+        <div>
+          <p class="eyebrow">Results & direct order</p>
+          <h1>Your bracelet matches are ready.</h1>
+          <p id="resultContext">Personality customization complete. Three purchase-ready recommendations are shown below.</p>
+        </div>
+        <a class="button button-secondary" id="regenerateLink" href="./customize.html?mode=personality">
+          <i data-lucide="rotate-ccw"></i>
+          Regenerate
+        </a>
+      </section>
+
+      <section class="result-page-grid">
+        <div class="recommendation-zone">
+          <div class="recommendation-header">
+            <p class="eyebrow">Recommended designs</p>
+            <span>Choose one design to lock a draft order snapshot.</span>
+          </div>
+          <div class="recommendation-cards" id="recommendationCards"></div>
+        </div>
+
+        <aside class="insight-panel">
+          <div class="tryon-card">
+            <img id="resultWrist" src="./assets/wrist-sample.jpg" alt="AI wrist try-on preview" />
+            <div class="bracelet-visual result-bracelet" aria-hidden="true"></div>
+            <span class="preview-watermark">AI Preview · One Bracelet</span>
+          </div>
+          <h2 id="selectedName">Clear Confidence Set</h2>
+          <p id="selectedStory">A warm, structured bracelet for steadier confidence and everyday momentum.</p>
+          <details open>
+            <summary>Why this design</summary>
+            <p id="insightCopy">
+              Selected for confidence and balance goals, with citrine warmth, tiger eye grounding, and clear quartz brightness.
+            </p>
+          </details>
+          <details>
+            <summary>Privacy and cultural note</summary>
+            <p>Uploaded photos and birth data should be deletable. Birth energy readings are cultural inspiration only.</p>
+          </details>
+        </aside>
+
+        <aside class="checkout-panel" id="checkout">
+          <p class="eyebrow">Direct checkout</p>
+          <div class="price-line">
+            <span>Total</span>
+            <strong id="selectedPrice">$68</strong>
+          </div>
+          <label>
+            <span>Wrist size</span>
+            <input placeholder="6.25 in" />
+          </label>
+          <label>
+            <span>Bead size</span>
+            <select>
+              <option>8 mm - recommended</option>
+              <option>6 mm - delicate</option>
+              <option>10 mm - statement</option>
+            </select>
+          </label>
+          <label>
+            <span>Packaging</span>
+            <select>
+              <option>Signature pouch + story card</option>
+              <option>Gift box + story card +$8</option>
+            </select>
+          </label>
+          <label>
+            <span>Shipping address</span>
+            <input placeholder="Street, city, state" />
+          </label>
+          <div class="payment-row">
+            <button class="icon-only" type="button" aria-label="Apple Pay"><i data-lucide="apple"></i></button>
+            <button class="icon-only" type="button" aria-label="Credit card"><i data-lucide="credit-card"></i></button>
+            <button class="icon-only" type="button" aria-label="PayPal style payment"><i data-lucide="wallet-cards"></i></button>
+          </div>
+          <button class="button button-primary" id="buyButton" type="button">
+            Buy Now
+            <i data-lucide="lock-keyhole"></i>
+          </button>
+          <p class="microcopy">Payment should verify inventory again before creating the production order.</p>
+        </aside>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
