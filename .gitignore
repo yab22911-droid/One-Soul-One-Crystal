@@ -1,12 +1,18 @@
 site_server.*.txt
 ~$*.docx
-SEO/
-backups/
-店铺照片/
-手腕/
-site/qa-*.png
-Astrala__Zodiac_Signs__Compatibility__Numerology_and_Tarot.html
-*.log
+
+# Local-only references, archives, and raw source material.
+archive/
+assets/source/
+local-references/
+research/
 tmp/
+
+# Generated QA screenshots and logs.
+site/qa-*.png
+docs/qa/
+*.log
+
+# OS metadata.
 .DS_Store
 Thumbs.db
