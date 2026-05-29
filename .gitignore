@@ -1,3 +1,12 @@
 site_server.*.txt
 ~$*.docx
 SEO/
+backups/
+店铺照片/
+手腕/
+site/qa-*.png
+Astrala__Zodiac_Signs__Compatibility__Numerology_and_Tarot.html
+*.log
+tmp/
+.DS_Store
+Thumbs.db
