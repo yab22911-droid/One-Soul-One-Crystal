@@ -1,21 +1,9 @@
 # Frontend Structure
 
-Current website working area:
+Rebuild status:
 
 ```text
-site/
-  index.html            Home page layout and content.
-  customize.html        Customization flow, wrist preview, and questionnaire screens.
-  results.html          Recommendation result and order summary page.
-  styles.css            Current complete visual system: colors, layout, responsive rules, components.
-  app.js                Shared interaction logic, local state, icons, form flow, cart count.
-  assets/
-    hero-crystal-bracelets.png
-    store-cover.png
-    crystal-library.png
-    bracelet-combinations.png
-    wrist-sizing.png
-    wrist-sample.jpg
+site/                  Reserved for the next website rebuild.
 ```
 
 Project documents:
@@ -33,9 +21,10 @@ Local-only materials:
 ```text
 assets/source/         Original shop and wrist reference images.
 archive/snapshots/     Backup snapshots for restoration.
+archive/snapshots/site-before-rebuild-20260529/
 local-references/      Third-party reference material.
 research/              Market and competitor references.
 tmp/logs/              Local server logs.
 ```
 
-For frontend changes, start with `site/styles.css` for visual changes, then adjust the three HTML files only when the layout or component structure needs to change. Keep `site/app.js` changes focused on behavior needed by the design.
+The old static site has been moved into the local-only archive. When rebuilding, create a fresh `site/` directory and use the archived copy only as a reference.

@@ -1,11 +1,10 @@
 # One Soul One Crystal
 
-Development workspace for the AI crystal bracelet customization site.
+Development workspace for the AI crystal bracelet customization project.
 
 ## Structure
 
 ```text
-site/                  Current static website.
 docs/prd/              Product requirement documents.
 docs/briefs/           Short project briefs.
 docs/qa/               Local-only QA screenshots.
@@ -17,4 +16,6 @@ research/              Local-only market references.
 tmp/logs/              Local-only runtime logs.
 ```
 
-Only the development website and core project documents are intended for GitHub. Local-only folders are ignored by Git.
+The previous `site/` implementation has been archived locally under `archive/snapshots/site-before-rebuild-20260529/`. A new `site/` directory can be created when the rebuild starts.
+
+Only core project documents are intended for GitHub right now. Local-only folders are ignored by Git.
